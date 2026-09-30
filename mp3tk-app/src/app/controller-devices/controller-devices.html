@@ -1,0 +1,13 @@
+<h2>Device List</h2>
+
+<ul>
+  @for (device of devices; track $index) {
+    <li>Device name: {{ device.device }}
+    <li>TOTAL storage: {{ device['total_storage']}} GB 
+    <li>Device space left: {{ device['free_storage']}} GB disponibili di  {{ device['total_storage']}} GB
+    <li>Used space: {{ device['used_storage']}} GB
+
+  } @empty {
+      <li>There are no items.</li>
+    }
+</ul>
